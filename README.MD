@@ -18,7 +18,7 @@ Pxtorem CLI takes 3 arguments:
 |`--rootvalue`|`-r`|`16px`|Default font size for conversion e.g 16px == 1rem|
 
 ## Example
-`cd you style folder`
+cd you style folder
 `pxtorem -i style.css -o style.processed.css -r 16px`
 
 if you give input arg, you have to give output arg
@@ -26,7 +26,7 @@ if you give input arg, you have to give output arg
 
 ## without arguments
 
-`cd you style folder`
+cd you style folder
 `pxtorem`
 
 it will convert all style files in you style floder
