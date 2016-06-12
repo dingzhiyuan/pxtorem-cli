@@ -58,7 +58,7 @@ if(!program.output && program.input){
     process.exit(1);
 }
 
-if(isNaN(program.rootvalue)){
+if(program.rootvalue && isNaN(program.rootvalue)){
     console.log(chalk.red('Error: --rootvalue must be a Number. Use --help for additional info'));
     process.exit(1);
 }
