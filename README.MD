@@ -19,6 +19,7 @@ Pxtorem CLI takes 3 arguments:
 
 ## Example
 cd you style folder
+
 `pxtorem -i style.css -o style.processed.css -r 16px`
 
 if you give input arg, you have to give output arg
@@ -27,6 +28,7 @@ if you give input arg, you have to give output arg
 ## without arguments
 
 cd you style folder
+
 `pxtorem`
 
 it will convert all style files in you style floder
@@ -48,3 +50,7 @@ as [pxtorem module](https://www.npmjs.com/package/pxtorem)
 }`
 
 but you can create a "pxtorem.json" file in the cwd folder to rewrite the options
+
+## v1.0.6 Bug fix 
+
+give a value to argument "r" in command line, it dose not work.

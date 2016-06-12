@@ -13,7 +13,7 @@
     ]
   ],
   "_from": "pxtorem-cli@latest",
-  "_id": "pxtorem-cli@1.0.0",
+  "_id": "pxtorem-cli@1.0.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/pxtorem-cli",
@@ -76,7 +76,6 @@
   ],
   "name": "pxtorem-cli",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dingzhiyuan/pxtorem-cli.git"
@@ -84,5 +83,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.0"
+  "version": "1.0.6"
 }

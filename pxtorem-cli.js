@@ -59,7 +59,7 @@ if(!program.output && program.input){
 }
 
 if(program.rootvalue){
-    options.rootvalue = program.rootvalue;
+    options.rootValue = program.rootvalue;
 }
 
 /**
