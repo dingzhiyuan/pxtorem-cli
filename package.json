@@ -13,7 +13,11 @@
     ]
   ],
   "_from": "pxtorem-cli@latest",
+<<<<<<< HEAD
   "_id": "pxtorem-cli@1.0.1",
+=======
+  "_id": "pxtorem-cli@1.0.2",
+>>>>>>> cd40201fd8482a2f0f21b6563c5db272a8d86476
   "_inCache": true,
   "_installable": true,
   "_location": "/pxtorem-cli",
