@@ -15,12 +15,12 @@ Pxtorem CLI takes 3 arguments:
 |---|---|---|---|
 |`--input`|`-i`|`n/a`|Relative path to the stylesheet to process|
 |`--output`|`-o`|`n/a`|Relative path to save the processed stylesheet|
-|`--rootvalue`|`-r`|`16px`|Default font size for conversion e.g 16px == 1rem|
+|`--rootvalue`|`-r`|`16`|Default font size for conversion e.g 16px == 1rem|
 
 ## Example
 cd you style folder
 
-`pxtorem -i style.css -o style.processed.css -r 16px`
+`pxtorem -i style.css -o style.processed.css -r 16`
 
 if you give input arg, you have to give output arg
 

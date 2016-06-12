@@ -34,10 +34,10 @@ var defaults={
     propWhiteList:[]
 };
 program
-    .version('1.0.3')
+    .version('1.0.8')
     .option('-i, --input [path]', 'relative path to the stylesheet to process')
     .option('-o, --output [path]', 'the destination to save')
-    .option('-r, --rootvalue [rootvalue]', 'Rem root value e.g. 16px <optional> Default: 16px')
+    .option('-r, --rootvalue [rootvalue]', 'Rem root value e.g. 16 <optional> Default: 16')
     .parse(process.argv);
 
 /**
@@ -55,6 +55,11 @@ if(!program.input && program.output){
 
 if(!program.output && program.input){
     console.log(chalk.red('Error: --output was missing an attribute. Use --help for additional info'));
+    process.exit(1);
+}
+
+if(isNaN(program.rootvalue)){
+    console.log(chalk.red('Error: --rootvalue must be a Number. Use --help for additional info'));
     process.exit(1);
 }
 
