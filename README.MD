@@ -1,6 +1,6 @@
 # Pxtorem CLI
 
-A command line wrapper for the excellent [pxtorem module](https://www.npmjs.com/package/pxtorem).
+A command line wrapper for the excellent [postcss-pxtorem module](https://www.npmjs.com/package/postcss-pxtorem).
 
 
 ## Install
@@ -37,7 +37,7 @@ warining it will use the default options, and it will cover the file.
 
 ## default options
 
-as [pxtorem module](https://www.npmjs.com/package/pxtorem)
+as [pxtorem module](https://www.npmjs.com/package/postcss-pxtorem)
 
 `{
     "rootValue": 16,

@@ -11,7 +11,7 @@ var readJson = function(path){
     var t = fs.readFileSync(path);
     return eval('('+ t +')');
 };
-function cloneObj(oldObj) { //复制对象方法
+function cloneObj(oldObj) {
     if (typeof(oldObj) != 'object') return oldObj;
         if (oldObj == null) return oldObj;
             var newObj = new Object();
@@ -19,10 +19,10 @@ function cloneObj(oldObj) { //复制对象方法
             newObj[i] = cloneObj(oldObj[i]);
     return newObj;
 };
-function extendObj() { //扩展对象
+function extendObj() {
     var args = arguments;
     if (args.length < 2) return;
-    var temp = cloneObj(args[0]); //调用复制对象方法
+    var temp = cloneObj(args[0]);
     for (var n = 1; n < args.length; n++) {
         for (var i in args[n]) {
             temp[i] = args[n][i];
@@ -34,7 +34,7 @@ var defaults={
     propWhiteList:[]
 };
 program
-    .version('1.0.8')
+    .version('1.1.0')
     .option('-i, --input [path]', 'relative path to the stylesheet to process')
     .option('-o, --output [path]', 'the destination to save')
     .option('-r, --rootvalue [rootvalue]', 'Rem root value e.g. 16 <optional> Default: 16')
@@ -70,7 +70,6 @@ if(program.rootvalue){
 /**
  * Execute pxtorem
  */
-// console.log(options);
 
 var __pxtorem=function(file,outPath){
     var postcss = require('postcss');
@@ -99,17 +98,14 @@ if(!program.output && !program.input){
         }
 
         files.forEach(function (e, i) {
-            // console.log(e);
             var paths=node_path.join(path,e);
             fs.stat(e, function (err, stat) {
                 if(stat.isDirectory()){
-                   // console.log(e);
                 }else{
                     if(/.css/.test(e)){
                         var file = fs.readFileSync(paths, 'utf8'); 
                         console.log(chalk.gray(e+' start pxtorem'));
                         __pxtorem(file,e);
-                      // console.log(e);
                     }
                 }
             });
