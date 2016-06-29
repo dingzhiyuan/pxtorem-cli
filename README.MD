@@ -31,9 +31,9 @@ cd you style folder
 
 `pxtorem`
 
-it will convert all style files in you style floder
+it will process all style files in you style floder
 
-warining it will use the default options, and it will cover the file.
+warining it will use the default options, and it will use .processed as the filename suffix
 
 ## default options
 
@@ -51,6 +51,14 @@ as [pxtorem module](https://www.npmjs.com/package/postcss-pxtorem)
 
 but you can create a "pxtorem.json" file in the cwd folder to rewrite the options
 
+## v1.1.2
+
+check for css syntax errors
+
+Add exception handling method
+
+
 ## v1.0.6 Bug fix 
 
 give a value to argument "r" in command line, it dose not work.
+

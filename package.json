@@ -1,44 +1,4 @@
 {
-  "_args": [
-    [
-      {
-        "name": "pxtorem-cli",
-        "raw": "pxtorem-cli",
-        "rawSpec": "",
-        "scope": null,
-        "spec": "latest",
-        "type": "tag"
-      },
-      ""
-    ]
-  ],
-  "_from": "pxtorem-cli@latest",
-  "_id": "pxtorem-cli@1.1.0",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/pxtorem-cli",
-  "_npmUser": {
-    "email": "idingzhiyuan@qq.com",
-    "name": "dingzhiyuan"
-  },
-  "_npmVersion": "1.4.28",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "pxtorem-cli",
-    "raw": "pxtorem-cli",
-    "rawSpec": "",
-    "scope": null,
-    "spec": "latest",
-    "type": "tag"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "",
-  "_shasum": "",
-  "_shrinkwrap": null,
-  "_spec": "pxtorem-cli",
-  "_where": "",
   "author": {
     "email": "idingzhiyuan@qq.com",
     "name": "dingzhiyuan",
@@ -53,8 +13,8 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "commander": "^2.5.1",
-    "postcss": "^5.0.14",
-    "postcss-pxtorem": "^3.3.1"
+    "postcss": "5.0.14",
+    "postcss-pxtorem": "3.3.1"
   },
   "description": "pxtorem command line tool",
   "devDependencies": {},
@@ -67,7 +27,6 @@
     "commandline"
   ],
   "license": "MIT",
-  "main": "pxtorem-cli.js",
   "maintainers": [
     {
       "email": "idingzhiyuan@qq.com",
@@ -83,5 +42,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.1.0"
+  "version": "1.1.3"
 }

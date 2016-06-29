@@ -31,7 +31,8 @@ function extendObj() {
     return temp;
 }
 var defaults={
-    propWhiteList:[]
+    propWhiteList:[],
+    suffix:".processed"
 };
 program
     .version('1.1.0')
@@ -71,19 +72,30 @@ if(program.rootvalue){
  * Execute pxtorem
  */
 
-var __pxtorem=function(file,outPath){
+var __pxtorem=function(path,file,outPath){
+    var cwd=process.cwd();
+    var outPath=node_path.join(cwd,outPath);
     var postcss = require('postcss');
     var pxtorem = require('postcss-pxtorem');
-    var processedCss=postcss(pxtorem(options)).process(file).css;
+    var processedCss="";
+    try 
+    {
+        processedCss=postcss(pxtorem(options)).process(file).css;
+    } 
+    catch (e) 
+    { 
+        console.log(chalk.red("process file "+path+" encounters an error. "+e.message));
+    } 
+
     if(processedCss){
         fs.writeFile(outPath, processedCss, function (err) {
             if (err) {
                 throw err;
             }
-            console.log(chalk.green(outPath+' pxtorem complete'));
+            console.log(chalk.green(path+' pxtorem complete'));
         });
     }else{
-        console.log(chalk.red(outPath+' noting to replace'));
+        console.log(chalk.red(path+' noting to replace'));
     }
 }
 
@@ -101,11 +113,12 @@ if(!program.output && !program.input){
             var paths=node_path.join(path,e);
             fs.stat(e, function (err, stat) {
                 if(stat.isDirectory()){
+
                 }else{
                     if(/.css/.test(e)){
                         var file = fs.readFileSync(paths, 'utf8'); 
                         console.log(chalk.gray(e+' start pxtorem'));
-                        __pxtorem(file,e);
+                        __pxtorem(paths,file,e.replace(/(.*)\.(.*)/,"$1"+options.suffix+".$2"));
                     }
                 }
             });
@@ -115,5 +128,5 @@ if(!program.output && !program.input){
     });
 }else{
     var file = fs.readFileSync(program.input, 'utf8');
-    __pxtorem(file,program.output);
+    __pxtorem(program.input,file,program.output);
 }
